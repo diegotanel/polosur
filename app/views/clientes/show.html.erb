@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre comercial:</b>
+  <%= @cliente.nombre_comercial %>
+</p>
+
+<p>
+  <b>Razon social:</b>
+  <%= @cliente.razon_social %>
+</p>
+
+<p>
+  <b>Codigo interno:</b>
+  <%= @cliente.codigo_interno %>
+</p>
+
+<p>
+  <b>Cuit:</b>
+  <%= @cliente.cuit %>
+</p>
+
+<p>
+  <b>Condicion de iva:</b>
+  <%= @cliente.condicion_de_iva %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @cliente.telefono %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @cliente.direccion %>
+</p>
+
+<p>
+  <b>Localidad:</b>
+  <%= @cliente.localidad %>
+</p>
+
+<p>
+  <b>Ciudad:</b>
+  <%= @cliente.ciudad %>
+</p>
+
+<p>
+  <b>Provincia:</b>
+  <%= @cliente.provincia %>
+</p>
+
+<p>
+  <b>Codigo postal:</b>
+  <%= @cliente.codigo_postal %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @cliente.email %>
+</p>
+
+<p>
+  <b>Contacto:</b>
+  <%= @cliente.contacto %>
+</p>
+
+<p>
+  <b>Lugar de entrega:</b>
+  <%= @cliente.lugar_de_entrega %>
+</p>
+
+<p>
+  <b>Observaciones:</b>
+  <%= @cliente.observaciones %>
+</p>
+
+
+<%= link_to t('scaffoldi18n.edit'), edit_cliente_path(@cliente) %> |
+<%= link_to t('scaffoldi18n.back'), clientes_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @sitio.nombre %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @sitio.direccion %>
+</p>
+
+<p>
+  <b>Detalle:</b>
+  <%= @sitio.detalle %>
+</p>
+
+
+<%= link_to t('scaffoldi18n.edit'), edit_sitio_path(@sitio) %> |
+<%= link_to t('scaffoldi18n.back'), sitios_path %>

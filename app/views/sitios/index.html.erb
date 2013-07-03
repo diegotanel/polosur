@@ -1,0 +1,27 @@
+<h1><%=t("activerecord.models.sitio") %></h1>
+
+<table>
+  <tr>
+    <th><%=t("activerecord.attributes.sitio.nombre") %></th>
+    <th><%=t("activerecord.attributes.sitio.direccion") %></th>
+    <th><%=t("activerecord.attributes.sitio.detalle") %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <%= content_tag_for(:tr, @sitios) do |sitio| %>
+    <td><%= sitio.nombre %></td>
+    <td><%= sitio.direccion %></td>
+    <td><%= sitio.detalle %></td>
+    <td><%= link_to t("scaffoldi18n.show"), sitio %></td>
+    <td><%= link_to t("scaffoldi18n.edit"), edit_sitio_path(sitio) %></td>
+    <td><%= link_to t("scaffoldi18n.destroy"), sitio, confirm: t("scaffoldi18n.are_you_sure?"), method: :delete %></td>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to t('scaffoldi18n.new'), new_sitio_path %>
+
+

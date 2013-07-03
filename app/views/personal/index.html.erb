@@ -1,0 +1,37 @@
+<h1><%=t("activerecord.models.personal") %></h1>
+
+<table>
+  <tr>
+    <th><%=t("activerecord.attributes.personal.nombre") %></th>
+    <th><%=t("activerecord.attributes.personal.apellido") %></th>
+    <th><%=t("activerecord.attributes.personal.fecha_de_nacimiento") %></th>
+    <th><%=t("activerecord.attributes.personal.documento") %></th>
+    <th><%=t("activerecord.attributes.personal.email") %></th>
+    <th><%=t("activerecord.attributes.personal.telefono") %></th>
+    <th><%=t("activerecord.attributes.personal.direccion") %></th>
+    <th><%=t("activerecord.attributes.personal.observaciones") %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <%= content_tag_for(:tr, @personal) do |personal| %>
+    <td><%= personal.nombre %></td>
+    <td><%= personal.apellido %></td>
+    <td><%= I18n.l(personal.created_at) %></td>
+    <td><%= personal.documento %></td>
+    <td><%= personal.email %></td>
+    <td><%= personal.telefono %></td>
+    <td><%= personal.direccion %></td>
+    <td><%= personal.observaciones %></td>
+    <td><%= link_to t("scaffoldi18n.show"), personal %></td>
+    <td><%= link_to t("scaffoldi18n.edit"), edit_personal_path(personal) %></td>
+    <td><%= link_to t("scaffoldi18n.destroy"), personal, confirm: t("scaffoldi18n.are_you_sure?"), method: :delete %></td>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to t('scaffoldi18n.new'), new_personal_path %>
+
+

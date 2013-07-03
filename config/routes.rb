@@ -1,4 +1,16 @@
 Polosur::Application.routes.draw do
+  resources :articulos
+
+  resources :clientes
+
+  resources :sitios
+
+  resources :personal
+
+  resources :tipos_de_envase
+
+  resources :tipos_de_gasto
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

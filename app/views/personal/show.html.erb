@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @personal.nombre %>
+</p>
+
+<p>
+  <b>Apellido:</b>
+  <%= @personal.apellido %>
+</p>
+
+<p>
+  <b>Fecha de nacimiento:</b>
+  <%= I18n.l(@personal.created_at) %>
+</p>
+
+<p>
+  <b>Documento:</b>
+  <%= @personal.documento %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @personal.email %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @personal.telefono %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @personal.direccion %>
+</p>
+
+<p>
+  <b>Observaciones:</b>
+  <%= @personal.observaciones %>
+</p>
+
+
+<%= link_to t('scaffoldi18n.edit'), edit_personal_path(@personal) %> |
+<%= link_to t('scaffoldi18n.back'), personal_index_path %>

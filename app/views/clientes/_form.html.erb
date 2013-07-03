@@ -1,0 +1,67 @@
+<%= form_for(@cliente) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+
+  <div class="field">
+    <%= f.label :nombre_comercial %><br />
+    <%= f.text_field :nombre_comercial %>
+  </div>
+  <div class="field">
+    <%= f.label :razon_social %><br />
+    <%= f.text_field :razon_social %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo_interno %><br />
+    <%= f.text_field :codigo_interno %>
+  </div>
+  <div class="field">
+    <%= f.label :cuit %><br />
+    <%= f.text_field :cuit %>
+  </div>
+  <div class="field">
+    <%= f.label :condicion_de_iva %><br />
+    <%= f.text_field :condicion_de_iva %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br />
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :localidad %><br />
+    <%= f.text_field :localidad %>
+  </div>
+  <div class="field">
+    <%= f.label :ciudad %><br />
+    <%= f.text_field :ciudad %>
+  </div>
+  <div class="field">
+    <%= f.label :provincia %><br />
+    <%= f.text_field :provincia %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo_postal %><br />
+    <%= f.text_field :codigo_postal %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :contacto %><br />
+    <%= f.text_field :contacto %>
+  </div>
+  <div class="field">
+    <%= f.label :lugar_de_entrega %><br />
+    <%= f.text_field :lugar_de_entrega %>
+  </div>
+  <div class="field">
+    <%= f.label :observaciones %><br />
+    <%= f.text_area :observaciones %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

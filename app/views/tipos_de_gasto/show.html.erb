@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Detalle:</b>
+  <%= @tipo_de_gasto.detalle %>
+</p>
+
+
+<%= link_to t('scaffoldi18n.edit'), edit_tipo_de_gasto_path(@tipo_de_gasto) %> |
+<%= link_to t('scaffoldi18n.back'), tipos_de_gasto_path %>

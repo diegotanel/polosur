@@ -1,0 +1,51 @@
+<h1><%=t("activerecord.models.cliente") %></h1>
+
+<table>
+  <tr>
+    <th><%=t("activerecord.attributes.cliente.nombre_comercial") %></th>
+    <th><%=t("activerecord.attributes.cliente.razon_social") %></th>
+    <th><%=t("activerecord.attributes.cliente.codigo_interno") %></th>
+    <th><%=t("activerecord.attributes.cliente.cuit") %></th>
+    <th><%=t("activerecord.attributes.cliente.condicion_de_iva") %></th>
+    <th><%=t("activerecord.attributes.cliente.telefono") %></th>
+    <th><%=t("activerecord.attributes.cliente.direccion") %></th>
+    <th><%=t("activerecord.attributes.cliente.localidad") %></th>
+    <th><%=t("activerecord.attributes.cliente.ciudad") %></th>
+    <th><%=t("activerecord.attributes.cliente.provincia") %></th>
+    <th><%=t("activerecord.attributes.cliente.codigo_postal") %></th>
+    <th><%=t("activerecord.attributes.cliente.email") %></th>
+    <th><%=t("activerecord.attributes.cliente.contacto") %></th>
+    <th><%=t("activerecord.attributes.cliente.lugar_de_entrega") %></th>
+    <th><%=t("activerecord.attributes.cliente.observaciones") %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <%= content_tag_for(:tr, @clientes) do |cliente| %>
+    <td><%= cliente.nombre_comercial %></td>
+    <td><%= cliente.razon_social %></td>
+    <td><%= cliente.codigo_interno %></td>
+    <td><%= cliente.cuit %></td>
+    <td><%= cliente.condicion_de_iva %></td>
+    <td><%= cliente.telefono %></td>
+    <td><%= cliente.direccion %></td>
+    <td><%= cliente.localidad %></td>
+    <td><%= cliente.ciudad %></td>
+    <td><%= cliente.provincia %></td>
+    <td><%= cliente.codigo_postal %></td>
+    <td><%= cliente.email %></td>
+    <td><%= cliente.contacto %></td>
+    <td><%= cliente.lugar_de_entrega %></td>
+    <td><%= cliente.observaciones %></td>
+    <td><%= link_to t("scaffoldi18n.show"), cliente %></td>
+    <td><%= link_to t("scaffoldi18n.edit"), edit_cliente_path(cliente) %></td>
+    <td><%= link_to t("scaffoldi18n.destroy"), cliente, confirm: t("scaffoldi18n.are_you_sure?"), method: :delete %></td>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to t('scaffoldi18n.new'), new_cliente_path %>
+
+

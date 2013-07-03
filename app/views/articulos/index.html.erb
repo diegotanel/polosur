@@ -1,0 +1,25 @@
+<h1><%=t("activerecord.models.articulo") %></h1>
+
+<table>
+  <tr>
+    <th><%=t("activerecord.attributes.articulo.codigo") %></th>
+    <th><%=t("activerecord.attributes.articulo.nombre") %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <%= content_tag_for(:tr, @articulos) do |articulo| %>
+    <td><%= articulo.codigo %></td>
+    <td><%= articulo.nombre %></td>
+    <td><%= link_to t("scaffoldi18n.show"), articulo %></td>
+    <td><%= link_to t("scaffoldi18n.edit"), edit_articulo_path(articulo) %></td>
+    <td><%= link_to t("scaffoldi18n.destroy"), articulo, confirm: t("scaffoldi18n.are_you_sure?"), method: :delete %></td>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to t('scaffoldi18n.new'), new_articulo_path %>
+
+

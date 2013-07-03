@@ -9,9 +9,13 @@
 		</td>
 
 		<tr><td><h2>Actualizaciones diarias</h2></td></tr>
-
-
 		<tr><td><h2>Tablas básicas</h2></td></tr>
+		<tr><td><%= link_to "Articulos", main_app.articulos_path %></td></tr>
+		<tr><td><%= link_to "Clientes", main_app.clientes_path %></td></tr>
+		<tr><td><%= link_to "Personal", main_app.personal_index_path %></td></tr>
+		<tr><td><%= link_to "Sitios", main_app.sitios_path %></td></tr>
+		<tr><td><%= link_to "Tipos de envase", main_app.tipos_de_envase_path %></td></tr>
+		<tr><td><%= link_to "Tipos de gasto", main_app.tipos_de_gasto_path %></td></tr>
 		</tr>
 	</table>
 	<% else %>

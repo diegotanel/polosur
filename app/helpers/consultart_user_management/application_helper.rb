@@ -2,7 +2,7 @@ module ConsultartUserManagement
   module ApplicationHelper
 
     def logo
-      image_tag("taesa_logo.jpg", :alt => "Generico", :id => 'logo', :class => "round")
+      # image_tag("taesa_logo.jpg", :alt => "Generico", :id => 'logo', :class => "round")
     end
 
     def title

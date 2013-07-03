@@ -66,3 +66,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'consultart_user_management', :path => 'vendor/engines/consultart_user_management'

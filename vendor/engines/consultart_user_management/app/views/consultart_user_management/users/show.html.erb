@@ -1,0 +1,26 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+      <br/>
+      <div id="rol">
+        <%= "Rol: #{nombre_del_rol(@user)}" %>
+      </div>
+      <br/>
+      <% if current_user.admin? %>
+        <%= link_to "Editar usuario", edit_user_path(@user) %>
+        |
+        <%= link_to "Cambiar rol", role_path(@user), :method => :put %>
+      <% end %>
+    </td>
+    <td class="sidebar round">
+      <strong>Nombre</strong>
+      <%= @user.name %><br />
+      <strong>URL</strong>
+      <%= link_to user_path(@user), @user %>
+    </td>
+  </tr>
+</table>

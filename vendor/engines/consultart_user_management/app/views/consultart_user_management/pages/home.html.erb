@@ -1,0 +1,27 @@
+<% if signed_in? %>
+<table class="front" summary="For signed-in users">
+	<tr>
+		
+		<td class="main">
+			<td class="sidebar round">
+				<%= render 'consultart_user_management/shared/user_info' %>
+			</td>
+		</td>
+
+		<tr><td><h2>Actualizaciones diarias</h2></td></tr>
+
+
+		<tr><td><h2>Tablas básicas</h2></td></tr>
+		</tr>
+	</table>
+	<% else %>
+	<h1>Sample App</h1>
+
+	<p>
+		This is the home page for the
+		<a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+		sample application.
+	</p>
+
+	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+	<% end %>

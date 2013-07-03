@@ -1,0 +1,21 @@
+<%= render 'consultart_user_management/shared/error_messages', :object => f.object %>
+<div class="field">
+  <%= f.label :name, "Nombre" %><br />
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :email %><br />
+  <%= f.text_field :email %>
+</div>
+<div class="field">
+  <%= f.label :password, "Contraseña" %><br />
+  <%= f.password_field :password %>
+</div>
+<div class="field">
+  <%= f.label :password_confirmation, "Confirmación" %><br />
+  <%= f.password_field :password_confirmation %>
+</div>
+<div class="actions">
+  <%= f.submit labelSubmit %>
+</div>
+

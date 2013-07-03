@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703012508) do
+ActiveRecord::Schema.define(:version => 20130703015733) do
 
   create_table "articulos", :force => true do |t|
     t.string   "codigo"
@@ -38,6 +38,30 @@ ActiveRecord::Schema.define(:version => 20130703012508) do
     t.text     "observaciones"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "consultart_user_management_clientes", :force => true do |t|
+    t.string   "nombre"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "consultart_user_management_pruebas", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "consultart_user_management_users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.boolean  "admin",           :default => false
+    t.string   "password_digest"
+    t.string   "remember_token"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.index ["remember_token"], :name => "index_consultart_user_management_users_on_remember_token"
+    t.index ["email"], :name => "index_consultart_user_management_users_on_email", :unique => true
   end
 
   create_table "personal", :force => true do |t|

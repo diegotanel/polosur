@@ -1,0 +1,19 @@
+<header>
+<% if signed_in? %>
+		<%= link_to logo, consultart_user_management.home_path %>
+	<% else %>
+		<%= link_to logo, consultart_user_management.root_path %>
+<% end %>
+<nav class="round">
+<ul>
+  <% if signed_in? %>
+    <li><%= link_to "Home", consultart_user_management.home_path %></li>
+    <li><%= link_to "Usuarios", consultart_user_management.users_path %></li>
+    <li><%= link_to "Configuración", consultart_user_management.edit_user_path(current_user) %></li>
+
+    <li><%= link_to "Cerrar sesión", consultart_user_management.signout_path, :method => :delete %></li>
+  <% end %>
+</ul>
+</nav>
+</header>
+

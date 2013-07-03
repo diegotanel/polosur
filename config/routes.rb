@@ -12,6 +12,8 @@ Polosur::Application.routes.draw do
   resources :tipos_de_gasto
 
   mount ConsultartUserManagement::Engine => "/consultart_user_management"
+
+  root :to => 'consultart_user_management/sessions#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

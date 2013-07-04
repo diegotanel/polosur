@@ -37,6 +37,10 @@ module ConsultartUserManagement
             it "debe mostrar un mensaje" do
               flash[:error].should =~ /último administrador/i
             end
+
+            it "debe retornar a la ruta del perfil del usuario" do
+             request.path.should == user_path(@admin)
+            end
           end
         end
 

@@ -16,7 +16,7 @@ module ConsultartUserManagement
           if @adminCount == 1
             flash[:error] ="El último administrador no puede ser desasignado"
             @valid = false
-            render 'consultart_user_management/users/show'
+            redirect_to @user
           end
         end
         if @valid

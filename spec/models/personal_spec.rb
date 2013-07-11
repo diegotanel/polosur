@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Personal do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "se adiciona el campo apodo" do
+    Personal.new.should respond_to(:apodo)
+  end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703015733) do
+ActiveRecord::Schema.define(:version => 20130711165737) do
 
   create_table "articulos", :force => true do |t|
     t.string   "codigo"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20130703015733) do
     t.text     "observaciones"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.string   "apodo"
   end
 
   create_table "sitios", :force => true do |t|

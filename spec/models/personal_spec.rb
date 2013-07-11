@@ -7,8 +7,7 @@ describe Personal do
     end
 
     it "se debe poder modificar el valor del campo" do
-      @personal = Personal.new(:apodo => "fito")
-      @personal.save!
+      @personal = Personal.create!(:apodo => "fito")
       @personal.reload
       @personal.apodo.should == "fito"
     end

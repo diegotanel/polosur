@@ -4,6 +4,7 @@
   <tr>
     <th><%=t("activerecord.attributes.personal.nombre") %></th>
     <th><%=t("activerecord.attributes.personal.apellido") %></th>
+    <th><%=t("activerecord.attributes.personal.apodo") %></th>
     <th><%=t("activerecord.attributes.personal.fecha_de_nacimiento") %></th>
     <th><%=t("activerecord.attributes.personal.documento") %></th>
     <th><%=t("activerecord.attributes.personal.email") %></th>
@@ -18,6 +19,7 @@
   <%= content_tag_for(:tr, @personal) do |personal| %>
     <td><%= personal.nombre %></td>
     <td><%= personal.apellido %></td>
+    <td><%= personal.apodo %></td>
     <td><%= I18n.l(personal.created_at) %></td>
     <td><%= personal.documento %></td>
     <td><%= personal.email %></td>

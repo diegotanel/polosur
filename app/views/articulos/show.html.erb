@@ -10,6 +10,11 @@
   <%= @articulo.nombre %>
 </p>
 
+<p>
+  <b>Tipo de envase:</b>
+  <%= @articulo.tipo_de_envase.detalle %>
+</p>
+
 
 <%= link_to t('scaffoldi18n.edit'), edit_articulo_path(@articulo) %> |
 <%= link_to t('scaffoldi18n.back'), articulos_path %>

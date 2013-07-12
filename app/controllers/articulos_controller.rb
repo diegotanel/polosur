@@ -11,22 +11,24 @@ class ArticulosController < ApplicationController
 
   def new
     @articulo = Articulo.new
+    @tipo_de_envase = TipoDeEnvase.all
     respond_with(@articulo)
   end
 
   def edit
+    @tipo_de_envase = TipoDeEnvase.all
     @articulo = Articulo.find(params[:id])
   end
 
   def create
     @articulo = Articulo.new(params[:articulo])
-    @articulo.save
+    @tipo_de_envase = TipoDeEnvase.all unless @articulo.save
     respond_with(@articulo)
   end
 
   def update
     @articulo = Articulo.find(params[:id])
-    @articulo.update_attributes(params[:articulo])
+    @tipo_de_envase = TipoDeEnvase.all unless @articulo.update_attributes(params[:articulo])
     respond_with(@articulo)
   end
 

@@ -9,6 +9,10 @@
     <%= f.label :nombre %><br />
     <%= f.text_field :nombre %>
   </div>
+  <div class="field">
+    <%= f.label :tipo_de_envase %><br />
+    <%= f.collection_select("tipo_de_envase_id", @tipo_de_envase, "id", "detalle", :include_blank => "Seleccione un tipo de envase...") %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

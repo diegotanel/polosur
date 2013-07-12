@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130711165737) do
+ActiveRecord::Schema.define(:version => 20130712001840) do
 
   create_table "articulos", :force => true do |t|
     t.string   "codigo"
     t.string   "nombre"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "tipo_de_envase_id", :null => false
   end
 
   create_table "clientes", :force => true do |t|
@@ -60,9 +61,10 @@ ActiveRecord::Schema.define(:version => 20130711165737) do
     t.string   "remember_token"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
-    t.index ["remember_token"], :name => "index_consultart_user_management_users_on_remember_token"
-    t.index ["email"], :name => "index_consultart_user_management_users_on_email", :unique => true
   end
+
+  add_index "consultart_user_management_users", ["email"], :name => "index_consultart_user_management_users_on_email", :unique => true
+  add_index "consultart_user_management_users", ["remember_token"], :name => "index_consultart_user_management_users_on_remember_token"
 
   create_table "personal", :force => true do |t|
     t.string   "nombre"

@@ -13,7 +13,7 @@ gem 'money'
 gem 'money-rails', "0.7.0"#, :git => 'git://github.com/RubyMoney/money-rails.git'
 gem 'hirb-unicode'
 gem 'travis-lint'
-gem 'schema_plus'
+# gem 'schema_plus'
 
 group :production do
   # gems specifically for Heroku go here

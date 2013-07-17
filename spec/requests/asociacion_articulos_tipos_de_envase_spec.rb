@@ -11,10 +11,11 @@ describe "AsociacionArticulosTiposDeEnvases" do
 
     it "debe mostrar un listado con los tipos de envase" do
       @tipo_de_envase = TipoDeEnvase.create!(:detalle => "bolsa")
+      @tipo_de_envase_id = @tipo_de_envase.id.to_s
       visit new_articulo_path
       response.should have_selector("select#articulo_tipo_de_envase_id") do |n|
         n.should have_selector('option[value=""]', :content => "Seleccione un tipo de envase...")
-        n.should have_selector('option[value="1"]', :content => "bolsa")
+        n.should have_selector("option[value=\"#{@tipo_de_envase.id}\"]", :content => "bolsa")
       end
     end
 
@@ -44,7 +45,8 @@ describe "AsociacionArticulosTiposDeEnvases" do
       fill_in :nombre, :with => "art1"
       select "bolsa", :from => :articulo_tipo_de_envase_id
       click_button
-      @articulo = Articulo.find(1)
+      # @articulo = Articulo.find(1)
+      @articulo = Articulo.first
     end
 
     it "debe traer el tipo de envase asociado" do

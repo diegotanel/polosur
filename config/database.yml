@@ -30,7 +30,7 @@ development:
   database: polosur_development
   pool: 5
   username: dtanel
-  password:
+  password: 
 
 test:
   adapter: postgresql
